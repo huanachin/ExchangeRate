@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BcpExchange</string>
+    <string name="you_send">Tu envías:</string>
+    <string name="you_receive">Tu recibes:</string>
+    <string name="sell">Venta: %.2f</string>
+    <string name="buy">Compra: %.2f</string>
+    <string name="change_currency">changeCurrency</string>
+    <string name="start_your_operation">Empieza tu operación</string>
+    <string name="logo_bcp">logoBcp</string>
+    <string name="logo_currency">logoCurrency</string>
+    <string name="sorry_we_have_problem">Lo sentimos hubo un problema\n¡Vuelva a intentar!</string>
+    <string name="error_image">errorImage</string>
+    <string name="select_currency">Seleccione Moneda</string>
+    <string name="pen_description">Soles</string>
+</resources>
