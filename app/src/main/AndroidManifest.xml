@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.ui.echange_rate.ExchangeRateActivity"/>
+            android:name=".presentation.ui.echange_rate.ExchangeRateActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".presentation.ui.currency_selection.CurrencySelectionActivity"
             android:windowSoftInputMode="adjustResize" />
