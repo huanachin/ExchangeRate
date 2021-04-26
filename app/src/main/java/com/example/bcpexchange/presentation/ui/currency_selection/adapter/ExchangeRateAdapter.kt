@@ -3,6 +3,7 @@ package com.example.bcpexchange.presentation.ui.currency_selection.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bcpexchange.R
 import com.example.bcpexchange.presentation.model.ExchangeRateModel
@@ -13,11 +14,13 @@ class ExchangeRateAdapter(
     private val onClickItem: (exchangeRate: ExchangeRateModel) -> Unit
 ) : RecyclerView.Adapter<ExchangeRateAdapter.ViewHolder>() {
 
-    private var exchangeRates: List<ExchangeRateModel> = emptyList()
+    private var exchangeRates= mutableListOf<ExchangeRateModel>()
 
     fun updateExchangeRates(exchangeRates: List<ExchangeRateModel>) {
-        this.exchangeRates = exchangeRates
-        notifyDataSetChanged()
+        val diffResult = DiffUtil.calculateDiff(ExchangeRateDiffCallback(this.exchangeRates, exchangeRates))
+        this.exchangeRates.clear()
+        this.exchangeRates.addAll(exchangeRates)
+        diffResult.dispatchUpdatesTo(this)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

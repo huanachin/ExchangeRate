@@ -12,4 +12,7 @@
     <string name="error_image">errorImage</string>
     <string name="select_currency">Seleccione Moneda</string>
     <string name="pen_description">Soles</string>
+    <string name="network_error_message">No tienes conexión a internet</string>
+    <string name="server_error_message">Hubo un error en el servidor</string>
+    <string name="unexpected_error_message">Hubo un error inesperado</string>
 </resources>

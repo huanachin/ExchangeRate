@@ -20,6 +20,6 @@ class GetInitialExchangeRate @Inject constructor(private val exchangeRateReposit
                 return Either.Success(exchangeRate.toDomain())
             }
         }
-
+         
     }
 }

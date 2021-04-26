@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.exchange_rate_activity.*
 @AndroidEntryPoint
 class ExchangeRateActivity : AppCompatActivity() {
 
-
     private val viewModel: ExchangeRateViewModel by viewModels()
 
     private var exchangeRate: ExchangeRateModel? = null
@@ -87,7 +86,6 @@ class ExchangeRateActivity : AppCompatActivity() {
         this.currencySwitchState = !currencySwitchState
         exchangeRate?.let { validateSwitch(it) }
         amount?.let { onAmountSendChanged(it) }
-
     }
 
     private fun onCurrencyExchangeRateChange(exchangeRate: ExchangeRateModel) {
